@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* Custom utility styles for VLink Inventory design system */
+
+:root {
+  font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #F3F4F6;
+  color: #111827;
+}
+
+/* Print Media Rules */
+@media print {
+  /* Hide sidebar, headers, controls, and download buttons */
+  nav, 
+  aside, 
+  header, 
+  .no-print, 
+  button, 
+  .btn,
+  .filter-section,
+  .logout-btn {
+    display: none !important;
+  }
+
+  /* Reset layout for full page printing */
+  body, 
+  main, 
+  .workspace-canvas {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    box-shadow: none !important;
+  }
+
+  .print-card {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .print-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  .print-table th, 
+  .print-table td {
+    border: 1px solid #E5E7EB !important;
+    padding: 8px !important;
+    font-size: 10pt !important;
+  }
+}
